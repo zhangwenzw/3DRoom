@@ -1,0 +1,47 @@
+body,html{
+    width: 100%;height:100%;margin:0;padding:0;
+}
+.scene{
+    width:100%;height:100%;position:absolute;left:0;top:0;perspective: 500px;
+}
+.scene .room{
+    width:100%;height:100%;position:absolute;left:0;top:0;transform-style: preserve-3d;transition: transform 3s ease;backface-visibility:hidden;
+}
+.scene .room .panel{
+    width:100%;height:100%;position:absolute;left:0;top:0;box-shadow: 0 0 10px #666 inset;transform-style: preserve-3d;
+}
+.scene .room .panel:first-child{
+    background:url("../img/tianhuaban.jpg") center;
+    background-size:cover;
+    transform-origin:top;
+    transform: rotateX(90deg);
+}
+.scene .room .panel:nth-child(2){
+    background:url("../img/floor1.jpg");
+    transform-origin:bottom;
+    transform: rotateX(-90deg);
+}
+.scene .room .panel:nth-child(3){
+    background:#fff;
+    transform-origin:left;
+    transform: rotateY(-90deg);
+}
+.scene .room .panel:nth-child(4){
+    background:#fff;
+    transform-origin:right;
+    transform: rotateY(90deg);
+}
+.scene .room .panel:nth-child(5){
+    background:#fff url("../img/chuang1.jpg") no-repeat bottom;
+    background-size:1334px;
+}
+.scene .room .panel:nth-child(6){
+    background:#fff url("../img/mywebsite.png") no-repeat center;
+    background-size:cover;
+}
+.left .iconfont{
+    width:200px;height:200px;float:left;box-shadow: 0 0 10px #ccc;background:#eee;font-size: 100px;line-height: 200px;text-align: center;margin-top:200px;margin-left:100px;color:orange;transform: rotate3d(0,1,0,180deg);text-shadow:0 0 3px red ;overflow: hidden;
+}
+.right .iconfont{
+    width:200px;height:200px;float:left;box-shadow: 0 0 10px #ccc;background:#eee;font-size: 100px;line-height: 200px;text-align: center;margin-top:200px;margin-left:100px;color:orange;transform: rotate3d(0,1,0,180deg);text-shadow:0 0 3px red ; backface-visibility: visible;
+}
